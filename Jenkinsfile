@@ -5,7 +5,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'docker build -t my-flask .'
-        sh 'docker tag smart24/my-flask $DOCKER_BFLASK_IMAGE'
+        sh 'docker tag my-flask smart24/my-flask $DOCKER_BFLASK_IMAGE'
       }
     }
     stage('Test') {
